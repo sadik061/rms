@@ -1,0 +1,46 @@
+{% extends 'admin.html' %}
+
+
+{% block body %}
+
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+{% include "includes/_messages.html" %}
+          <h1>Dashboard <small style="
+    float: right;
+" > Welcome {{session.username}}</small></h1>
+
+          <section class="row text-center placeholders">
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="{{ url_for('static', filename='images/logo4.png') }}" width="75" height="150" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Aid</h4>
+              <div class="text-muted">Something else</div>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="{{ url_for('static', filename='images/logo5.png') }}" width="75" height="150" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Health</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="{{ url_for('static', filename='images/logo6.png') }}" width=150" height="150" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Food</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+            <div class="col-6 col-sm-3 placeholder">
+              <img src="{{ url_for('static', filename='images/logo7.png') }}" width=150" height="150" class="img-fluid rounded-circle" alt="Generic placeholder thumbnail">
+              <h4>Housing</h4>
+              <span class="text-muted">Something else</span>
+            </div>
+          </section>
+
+
+        </main>
+      </div>
+
+{% endblock %}

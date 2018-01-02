@@ -1,0 +1,92 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+	
+	<!-- Page Content -->
+    <div class="container">
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+
+      <!-- Heading Row -->
+      <div class="row">
+        <div class="col-md-8 mb-4"">
+          <div class="imgwrapper">
+   			<img src="{{ url_for('static', filename='images/homecover.jpg') }}" class="img-responsive">
+		  </div>
+        </div>
+        <!-- /.col-lg-8 -->
+        <div class="col-md-4 mb-4"">
+          <h1>Rohinga Management System</h1>
+          <p>Rohinga management system is a web based platform to help Rohingas. By this system you can contribute with Bangladesh Army to save them. Register today to join.</p>
+          <a class="btn btn-primary btn-lg" href="http://www.rohingyablogger.com/" target="_blank">News</a>
+        </div>
+        <!-- /.col-md-4 -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Call to Action Well -->
+
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Food</h2>
+              <p class="card-text">As the number of Rohingya refugees in Bangladesh tops 500,000, Handicap International has expressed alarm at the plight of thousands of destitute people arriving in the country every day. Although only half of refugees have received emergency shelters from NGOs in the field, 2,000 Rohingya continue to cross the border daily. Handicap International has sent an additional backup team to help the most vulnerable people access humanitarian assistance.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Health</h2>
+              <p class="card-text">Approximately 170 health care facilities are known to be operating across all camps and settlements. However, many of these facilities provide a basic level of services and referrals for additional services within camps and outside of the camps remains a challenge. Government hospital facilities are overcrowded and do not have the resources to cope with the high volumes of referral patients. Moreover, the services provided are not standardized and the quality of health care services varies considerably.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h2 class="card-title">Education</h2>
+              <p class="card-text">The learning centres provide early education to children aged 4 to 6, as well as non-formal basic education to children from ages 6 to 14. In each learning centre there are three shifts, with each shift comprising of 35 children</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; rmsbd.com 2017</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>s
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

@@ -1,0 +1,38 @@
+
+{% extends 'admin.html' %}
+
+
+
+{% block body %}
+
+{% from "includes/_error.html" import render_field %}
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+
+ <h1>Search Rohinga</h1>
+
+<form action="" method="POST">
+    <div class="form-group">
+      <label>Insert Rohinga Id</label>
+      <input type="text" name="id" class="form-control" value={{request.form.id}}>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+
+
+
+  
+
+
+</div>
+</main>
+
+{% endblock %}

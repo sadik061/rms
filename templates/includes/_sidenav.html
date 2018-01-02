@@ -1,0 +1,117 @@
+<nav class="col-md-2 col-sm-3 side d-none d-sm-block bg-light sidebar" style="
+    background-color: #232322;
+">
+{% if session.role=="admin" %}
+           <a class="btn" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">ADMIN PANEL</h4></a>
+           <div class="collapse show" id="collapseExample" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="/deshboard">Deshboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/adminregister">Admin Registration</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/admin-adminlist">Admin List</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+
+
+          <a class="btn" data-toggle="collapse" href="#EVENTS" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">EVENTS</h4></a>
+           <div class="collapse" id="EVENTS" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/pendingevents">Event Requests</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/aid">Aid</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+          <a class="btn" data-toggle="collapse" href="#ROHINGA" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">ROHINGA</h4></a>
+           <div class="collapse" id="ROHINGA" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav pnav nav-pills flex-column">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/addrohinga">Add New Rohinga</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/rohingainfo">Last Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/searchrohinga">Search Rohinga Info</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+          <a class="btn" data-toggle="collapse" href="#HOUSING" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">HOUSING</h4></a>
+           <div class="collapse" id="HOUSING" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav  pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/addschool">School</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/camps">Camps</a>
+            </li>
+          
+          </ul>
+          </div>
+        </div>
+
+          <a class="btn" data-toggle="collapse" href="#HEALTH" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">HEALTH</h4></a>
+           <div class="collapse" id="HEALTH" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav  pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/doctor">Doctor</a>
+            </li>
+          
+          </ul>
+          </div>
+
+        </div>
+
+
+        <a class="btn" data-toggle="collapse" href="#FOOD" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">FOOD</h4></a>
+           <div class="collapse" id="FOOD" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav  pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/aidcategory">Items</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="/itemrecord">Records</a>
+            </li>
+          
+          </ul>
+          </div>
+
+        </div>
+{% else %}
+          <a class="btn" data-toggle="collapse" href="#HEALTH" aria-expanded="false" aria-controls="collapseExample"><h4 style="color: dimgray;    margin-left: -7%;">HEALTH</h4></a>
+           <div class="collapse show" id="HEALTH" style="border: 1px solid rgb(60, 59, 59);">
+          <div class="card card-body">
+          <ul class="nav  pnav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="/patient">Patient</a>
+            </li>
+          
+          </ul>
+          </div>
+
+        </div>
+
+{% endif %}
+
+        </nav>

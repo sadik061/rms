@@ -1,0 +1,51 @@
+{% extends 'admin.html' %}
+
+
+{% block body %}
+
+{% from "includes/_error.html" import render_field %}
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+
+<h1>Patient</h1>
+ {% from "includes/_formhelper.html" import render_field %}
+  <form method="POST" action="{{ url_for('patient') }}">
+    
+    {{ form.csrf_token}}
+   <div class="form-group">
+       {{ render_field(form.patient_id) }}
+  </div>
+    <div class="form-group">
+       {{ render_field(form.doctor_id) }}
+  </div>
+  <div class="form-group">
+       {{ render_field(form.department) }}
+  </div>
+  <div class="form-group">
+       {{ render_field(form.disease) }}
+  </div>
+  <div class="form-group">
+       {{ render_field(form.start_date) }}
+  </div>
+   <div class="form-group">
+       {{ render_field(form.end_date) }}
+  </div>
+
+ 
+    <input type="submit" value="Submit">
+  </form>
+
+
+  </main>
+  
+
+
+</div>
+
+{% endblock %}

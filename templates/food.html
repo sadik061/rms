@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+{% block body %}
+<main role="main">
+  <h1 style="margin: 9px";> Food </h1>
+  <div class="card mb-3">
+        <div class="card-header">
+     
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>DAL(Distributed)</th>
+                  <th>DAL(TOTAL NEED)</th>
+                  <th>RICE(Distributed)</th>
+                  <th>RICE(TOTAL NEED)</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                 <th>DAL(Distributed)</th>
+                  <th>DAL(TOTAL NEED)</th>
+                  <th>RICE(Distributed)</th>
+                  <th>RICE(TOTAL NEED)</th>
+                </tr>
+              </tfoot>
+              <tbody>
+
+ {%for i in b %}
+   <tr>
+   <td>{{i['Dal']}} kg</td>
+
+ 
+
+
+{%endfor%}
+ {%for i in a %}
+  <td>{{d}} kg</td>
+   <td>{{i['Rice']}} kg</td>
+   <td>{{c}} kg</td>
+
+
+  </div>
+  </tr>
+
+
+{%endfor%}
+
+
+
+
+
+
+              	</tbody>
+                </table>
+                </div>
+                </div>
+
+
+
+
+</main>
+
+
+
+{% endblock %}

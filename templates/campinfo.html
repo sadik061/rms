@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='jQuery-plugin-progressbar.css') }}">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="{{ url_for('static', filename='jQuery-plugin-progressbar.js') }}"></script>
+
+
+<main role="main">
+  <h1 style="margin: 9px";> Housing </h1>	
+ 
+  	
+	<div class="progress-bar position" data-percent="{{Total_PP}}" data-duration="1000" data-color="#ccc,cadetblue" style="background-color: #fcfcfc;">
+		<h4 style="color:  black;">Population : {{T_Population}}</h4>
+	</div>
+	<div class="progress-bar position" data-percent="{{p_M}}" data-duration="1000" data-color="#ccc,blueviolet" style="background-color: #fcfcfc;">
+		<h4 style="color:  black;">Male : {{T_Male}}</h4>
+	</div>
+	<div class="progress-bar position" data-percent="{{p_F}}" data-duration="1000" data-color="#ccc,goldenrod" style="background-color: #fcfcfc;">
+		<h4 style="color:  black;">Female : {{T_Female}}</h4>
+	</div>
+	<div class="progress-bar position" data-percent="{{p_C}}" data-duration="1000" data-color="#ccc,green" style="background-color: #fcfcfc;">
+		<h4 style="color:  black;">Children : {{T_children}}</h4>
+	</div>
+	<div class="progress-bar position" data-percent="{{Total_FF}}" data-duration="1000" data-color="#ccc,yellow" style="background-color: #fcfcfc;">
+		<h4 style="color:  black;">Family : {{T_Family}}</h4>
+	</div>
+
+</div>
+
+<script>
+		$(".progress-bar").loading();
+		$('input').on('click', function () {
+			 $(".progress-bar").loading();
+		});
+	</script>
+</main>
+
+
+{% endblock %}

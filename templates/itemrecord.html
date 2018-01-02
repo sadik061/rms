@@ -1,0 +1,66 @@
+{% extends 'admin.html' %}
+
+
+{% block body %}
+
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+  <h2 style="margin: 9px";> Food </h2>
+  <div class="card mb-3">
+        <div class="card-header">
+     
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Amount(Per Person)</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                 <th>Item</th>
+                  <th>Amount(Per Person)</th>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
+              <tbody>
+
+ {%for i in ulist %}
+   <tr>
+   <td>{{i['type']}}</td>
+   <td>{{i['amount']}}</td>
+   <td><a class="btn btn-primary" href="edititem/{{i['type']}}" role="button"style="width: 29%;">Delete</a></td>
+
+  </div>
+  </tr>
+
+
+{%endfor%}
+
+
+
+
+
+
+              	</tbody>
+                </table>
+                </div>
+                </div>
+
+
+
+
+</main>
+
+
+
+{% endblock %}

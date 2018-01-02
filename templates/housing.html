@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block body %}
+<main role="main">
+  <h1 style="margin: 9px";> Housing </h1>
+    <div class="card mb-3">
+        <div class="card-header">
+       
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Camp No</th>
+                  <th>Camp Name</th>
+                  <th>Address</th>
+                  <th>Sanitation</th>
+                  <th>Tubewell</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                 <th>Camp No</th>
+                  <th>Camp Name</th>
+                  <th>Address</th>
+                  <th>Sanitation</th>
+                  <th>Tubewell</th>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
+              <tbody>
+  {%for i in ulist %}
+   <tr>
+   <td>{{i['camp_no']}}</td>
+   <td>{{i['camp_name']}}</td>
+   <td>{{i['address']}}</td>
+   <td>{{i['sanitation']}}</td>
+   <td>{{i['tubewell']}}</td>
+   <td><a class="btn btn-primary" href="housing/{{i['camp_no']}}" role="button">More</a></td>
+  </div>
+  </tr>
+{%endfor%}
+
+                </tbody>
+                </table>
+                </div>
+                </div>
+
+
+</main>
+
+
+
+{% endblock %}

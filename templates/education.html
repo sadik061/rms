@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<h1 style="margin: 9px";> Schools </h1>
+{%for i in ulist %}
+	 <div class="col-6 col-sm-5 placeholder" style="background-color: gainsboro;margin: 9px;height: 288px;">
+	 <h2 style="color: mediumaquamarine;font-size: -webkit-xxx-large;">{{i['name']}}</h2>
+	 <p>CAMP NO: {{i['camp_no']}}</p>
+	 <p>TEACHER: {{i['teacher_count']}}</p>
+	 <p>STUDENT: {{i['student_count']}}</p>
+	 <p>CAPACITY: {{i['student_capacity']}}</p>
+	 <p>CONTACT: {{i['contact']}}</p>
+	</div>
+{%endfor%}
+	
+{% endblock %}

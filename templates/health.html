@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+<main role="main">
+  <h1 style="margin: 9px";> Health Camps </h1>
+{%for i in ulist %}
+   <div class="col-6 col-sm-5 placeholder" style="background-color: gainsboro;margin: 9px;height: 462px;">
+   <h2 style="color: mediumaquamarine;font-size: -webkit-xxx-large;">{{i['event_name']}}</h2>
+   <p>{{i['Description']}}</p>
+   <p>START DATE: {{i['start_date']}}</p>
+   <p>END DATE: {{i['end_date']}}</p>
+   <p>CONTACT: {{i['contact']}}</p>
+   <p>Doctor Required: {{i['administrator']}}</p>
+   <p>Volunteer Required: {{i['volunteer']}}</p>
+   <a class="btn btn-primary" href="events/{{i['event_id']}}" role="button">Enroll</a>
+  </div>
+{%endfor%}
+
+</main>
+
+
+
+{% endblock %}

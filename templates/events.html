@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+	
+ {% from "includes/_formhelper.html" import render_field %}
+    
+    <h2>ADD EVENT</h2>
+  <form method="POST" action="{{ url }}">
+    
+    {{ form.csrf_token}}
+   
+    <div class="form-group">
+       {{ render_field(form.event_name) }}
+  </div>
+  <div class="form-group">
+       {{ render_field(form.sector) }}
+  </div>
+   <div class="form-group">
+       {{ render_field(form.startdate) }}
+  </div>
+   <div class="form-group">
+       {{ render_field(form.enddate) }}
+  </div>
+   <div class="form-group">
+       {{ render_field(form.Description) }}
+  </div>
+   <div class="form-group">
+       {{ render_field(form.contact) }}
+  </div>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+      <!-- /.container -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+{% endblock %}

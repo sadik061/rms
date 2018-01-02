@@ -1,0 +1,49 @@
+
+{% extends 'admin.html' %}
+
+
+
+{% block body %}
+
+{% from "includes/_error.html" import render_field %}
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+
+
+<div class="col-6 col-sm-6 placeholder">
+  <h2>Rohinga Info</h2>
+  <br>
+  <h4>NAME : {{rohingadata["rohinga_name"]}}</h4>
+  <h4>ID  :   {{rohingadata["rohinga_id"]}}</h4>
+  <h4>AGE:   {{rohingadata["age"]}}</h4>
+  <h4>SEX:   {{rohingadata["sex"]}}</h4>
+  <h4>Black LISTED:   {{rohingadata["black_listed"]}}</h4>
+ </div>
+
+<div class="col-6 col-sm-6 placeholder">
+  <h2>Fmaily Info</h2>
+  <br>
+  <h4>CAMP NAME : {{rohingadata["camp_name"]}}</h4>
+  <h4>FAMILY ID  :   {{familydata["family_id"]}}</h4>
+  <h4>TOTAL MEMBER:   {{familydata["member_count"]}}</h4>
+  <h4>CHILDREN:   {{familydata["children"]}}</h4>
+  <h4>ELDER:   {{familydata["elder"]}}</h4> 
+</div>
+
+<div class="col-6 col-sm-6 placeholder">
+  <h2>AID</h2>
+</div>
+</main>
+  
+
+
+</div>
+
+
+{% endblock %}

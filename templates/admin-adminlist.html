@@ -1,0 +1,48 @@
+{% extends 'admin.html' %}
+
+
+{% block body %}
+
+<div class="row">
+        {% include 'includes/_sidenav.html' %}
+
+        <main role="main" class="col-sm-9 ml-sm-auto col-md-10 pt-3" style="
+    padding-left: 20%;
+    width: 95.333333%;
+    padding-top: 4%;
+">
+    <h2>Admin List</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Email</th>
+                  <th>Password</th>
+                  <th>Role</th>
+                </tr>
+              </thead>
+              <tbody>
+                  {%for i in ulist %}
+                    <tr>
+                    <td>{{i['id']}}</td>
+                    <td>{{i['email']}}</td>
+                    <td>{{i['password']}}</td>
+                    <td>{{i['role']}}</td>
+                    
+                    </tr>
+                  {%endfor%}
+              </tbody>
+            </table>
+          </div>
+    
+
+
+    </main>
+    
+  
+
+
+</div>
+
+{% endblock %}
