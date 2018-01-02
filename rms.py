@@ -9,7 +9,6 @@ from functools import wraps
 
 
 app = Flask(__name__)
-
 app.config['SECRET_KEY'] = "thisissecrect"
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
@@ -147,7 +146,7 @@ def rootdr():
 @app.route('/home')
 def home():
     return render_template('home.html')
-
+#jbcszbcxjs
 
 @app.route('/food')
 def food():
